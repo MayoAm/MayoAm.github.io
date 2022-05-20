@@ -1,124 +1,108 @@
-@charset "UTF-8";
+:root {
+  --main-radius: 0.2px;
+  --main-padding: 0.2px;
+}
 
-@media only screen and (orientation: portrait) {
-    header{
-        width:100%;
-        height:94px;
-        background-image: url("images/topp_cell.jpg");
-    }
- .nav{
-     background-color: #999999;
-         clear:both;
- }
- .ul {
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     width: 100%;
-     background-color: #333;
-     position: relative;
-     height: auto;
-     overflow: auto;
- }
-
- li a {
-     display: block;
-     color: white;
-     padding: 10px 16px;
-     text-decoration: none;
-     }
- 
- li a.active{
-     background-color: #111;
-     color: white;
- }
+body {
+  font-family: "Inter", sans-serif;
+  background-image: url("images/test.jpg");
+  background-size: cover;
+}
 
 
- }
- @media only screen and (orientation: landscape) {
- .wrapper{
-     width: 800px;
-     height: 1000px;
-     background-color: pink;
-     margin: auto;
- }
 
- header{
-     width:800px;
-     height: 150px;
-     background-image: url("images/topp.jpg");
- }
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.002fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "main main main main main"
+    "content1 content2 content3 content4 content5"
+    "footer footer footer footer footer";
+  grid-gap: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #004d40;
+  text-align: center;
+}
 
- .nav{
-     width: 800px;
-     height: 40px;
-     background-color: #999999;
- }
+nav {
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
 
- ul {
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     overflow: hidden;
-     background-color: #333;
- }
+main {
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
 
- li {
-     float: left;
- }
+#content1 {
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
 
- li a {
-     display: block;
-     color: white;
-     text-align: center;
-     padding: 10px 16px;
-     text-decoration: none;
- }
+#content2 {
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
 
- li a:hover {
-     background-color: #111;
- }
+#content3 {
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content4 {
+  grid-area: content4;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content5 {
+  grid-area: content5;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+footer {
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
 
- article{
-     width: 500px;
-     height: 720px;
-     background-color: #ffffff;
-     float: left;
-     box-sizing: border-box;/*Nytt*/
-     padding:10px 20px;/*Nytt*/
- }
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
 
- aside{
-     width: 300px;
-     height: 720px;
-     background-color: rgb(255,200,200);
-     float: left;
-     box-sizing: border-box;/*Nytt*/
-     padding:10px 20px;/*Nytt*/
-
-
- }
-
- footer{
-     width: 800px;
-     height: 100px;
-     background-color: aqua;
-     clear: both;
-           }
- h3.caphead{
-         font-family: verdana;
-         font-size: 18px;
-         text-transform: capitalize;
-         /*alternativ "uppercase" eller "lowercase"*/
- }
- p.art {
-     font-family: times new roman;
-     font-size: 14px;
- }
- p.asi{
-     font-family: verdana;
-     font-size: 12px;
-     color: rgb(0,100,0);
- }
- }
-
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.8fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.2fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+	  "content4"
+	  "content5"
+      "footer";
+  }
+	body {background-size: auto}
+	.bossimages{max-width:50%;
+		 		height:auto;}
+	#content1{margin-left: auto; margin-right: auto;}
+	#content2{margin-left: auto; margin-right: auto;}
+	#content3{margin-left: auto; margin-right: auto;}
+	#content4{margin-left: auto; margin-right: auto;}
+	#content5{margin-left: auto; margin-right: auto;}
+}
