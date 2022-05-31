@@ -1,10 +1,5 @@
-:root {
-  --main-radius: 0.2px;
-  --main-padding: 0.2px;
-}
-
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Special Elite', cursive;
   background-image: url("images/test.jpg");
   background-size: cover;
 }
@@ -25,53 +20,38 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 18px;
-  color: #004d40;
+  color: brown;
   text-align: center;
 }
 
 nav {
   grid-area: nav;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 
 main {
   grid-area: main;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 
 #content1 {
   grid-area: content1;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 
 #content2 {
   grid-area: content2;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 
 #content3 {
   grid-area: content3;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
+
 }
 #content4 {
   grid-area: content4;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 #content5 {
   grid-area: content5;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 footer {
   grid-area: footer;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
 }
 
 a {

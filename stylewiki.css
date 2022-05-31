@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Special Elite', cursive;
+  background-size: auto;
+}
+
+.responsives{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 2fr 1fr 0.2fr;
+  grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-template-areas:
+    "tarkov tarkov tarkov"
+    "main main main"
+    "info bossimg bossimg"
+	"mapinfo drops drops"
+    "footer footer footer";
+  grid-gap: 0.05rem;
+  font-weight: 800;
+  font-size: 18px;
+  color:brown;
+  text-align: center;
+	
+}
+.sitetitle{
+	max-width:100%;
+	height:auto;
+	}
+#TarkovTitle{
+  grid-area: tarkov;
+}
+#map{
+	grid-area:mapinfo;
+}
+
+main{
+	grid-area: main;
+}
+
+#bossimg{
+	grid-area: bossimg;
+	
+}
+
+footer{
+	grid-area: footer;
+}
+#wikitext{
+	grid-area: info;
+}
+
+#dropsandinfo{
+	grid-area: drops;
+}
+@media only screen and (max-width :550px){
+ .responsives{
+    grid-template-columns: 5fr;
+    grid-template-rows: 0.6fr 0.2fr 0.9fr 2fr 0.1fr;
+    grid-template-areas:
+      "tarkov"
+	  "main"
+	  "bossimg"
+	  "info"
+	  "drops"
+	  "mapinfo"
+	  "footer";
+	 color:brown;
+  }
+body{
+	background-size:auto;
+}
+
+	
+	
+.sitetitle{
+	max-width:50%;
+	height:auto;
+	}
+}
