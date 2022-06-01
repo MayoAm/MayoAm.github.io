@@ -9,14 +9,14 @@ body {
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-  grid-template-rows: 0.002fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-template-columns: 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr;
+  grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
   grid-template-areas:
-    "nav nav nav nav nav"
-    "main main main main main"
-    "content1 content2 content3 content4 content5"
-    "footer footer footer footer footer";
-  grid-gap: 0.5rem;
+    "nav nav nav nav nav nav"
+    "main main main main main main"
+    "content1 content2 content3 content4 content5 content6"
+    "footer footer footer footer footer footer";
+  grid-gap: 0.25rem;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 18px;
@@ -50,6 +50,9 @@ main {
 #content5 {
   grid-area: content5;
 }
+#content6{
+	grid-area: content6;
+}
 footer {
   grid-area: footer;
   font-family: 'Dosis', sans-serif;
@@ -67,7 +70,7 @@ a {
 @media only screen and (max-width: 550px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.8fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.2fr;
+    grid-template-rows: 0.4fr 0.8fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.2fr;
     grid-template-areas:
       "nav"
       "main"
@@ -76,6 +79,7 @@ a {
       "content3"
 	  "content4"
 	  "content5"
+	  "content6"
       "footer";
   }
 	body {background-size: auto}
@@ -86,4 +90,5 @@ a {
 	#content3{margin-left: auto; margin-right: auto;}
 	#content4{margin-left: auto; margin-right: auto;}
 	#content5{margin-left: auto; margin-right: auto;}
+	#content6{margin-left: auto; margin-right: auto;}
 }
