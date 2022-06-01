@@ -51,7 +51,7 @@ main {
   grid-area: content5;
 }
 #content6{
-	grid-area: content6;
+  grid-area: content6;
 }
 footer {
   grid-area: footer;
