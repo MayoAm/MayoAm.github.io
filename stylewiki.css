@@ -40,6 +40,8 @@ main{
 
 #bossimg{
 	grid-area: bossimg;
+	color: brown;
+	font-family: 'Dosis', sans-serif;
 	
 }
 
